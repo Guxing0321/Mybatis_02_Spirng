@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.kekemile.dao.UserDao;
+import com.kekemile.mapper.UserMapper;
 import com.kekemile.po.User;
 
 public class TestUserMa {
@@ -31,8 +31,8 @@ public class TestUserMa {
 
 	@Test
 	public void Test01() {
-		UserDao ud = (UserDao) applicatonContext.getBean("userDao");
-		User u = ud.FindUserById(1);
+		UserMapper ud = (UserMapper) applicatonContext.getBean("userMapper");
+		User u = ud.selectUserById(1);
 		System.out.println(u);
 	}
 
