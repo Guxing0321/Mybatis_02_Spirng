@@ -12,8 +12,8 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 		// TODO Auto-generated method stub
 
 		SqlSession session = this.getSqlSession();
-		 return (User)session.selectOne("test.selectUserById", 1);
-		
+		return (User) session.selectOne("selectUserById", 1);
+
 	}
 
 	public void deleteUserById(int id) {
